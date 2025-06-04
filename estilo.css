@@ -1,0 +1,142 @@
+a{
+    text-decoration: none;
+    color: white;
+}
+
+body{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.918);
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+
+}
+
+.logo img{
+    height: 3rem;
+    margin-right: 10px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin-left: 0;
+    gap: 35px;
+    padding: 0px;
+    align-items: center;
+    margin-right: 30px;
+    font-family: "Noto Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+}
+
+nav a:hover{
+    color: aqua;
+}
+
+#textodevideo {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin-top: 80px;
+
+}
+
+video { 
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.capa {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.3;
+    z-index: 1;
+    mix-blend-mode: overlay;
+}
+
+.texto{
+    color: white;
+    padding: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+.texto h1{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2rem;
+}
+
+footer {
+    background-color: #111;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    font-family: "Noto Sans", sans-serif;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-contenido {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.footer-contenido p {
+    margin: 10px 0;
+    font-size: 0.9rem;
+}
+
+.social-iconos {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-iconos img {
+    width: 30px;
+    height: 30px;
+    transition: color 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
