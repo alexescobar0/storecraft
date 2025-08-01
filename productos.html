@@ -8,24 +8,172 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
     <header>
         <div class="logo">
             <img src="logo.png" alt="Logo StoreCraft">
-        </div>            
+        </div>   
+        
+        <div class="menu-toggle" id="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div> 
+        
         <nav>
             <ul class="nav-links">
                 <li><a href="./index.html">INICIO</a></li>
                 <li><a href="./productos.html">PRODUCTOS</a></li>
                 <li><a href="./contacto.html">CONTACTO</a></li>
-                <li><a href="./ubicacion.html">UBICACION</a></li>
+                <div id="icono-carrito">
+                <i class="fa-solid fa-cart-shopping"></i> <span id="contador-carrito">0</span>
+                </div>
             </ul>
         </nav>
     </header>
+    <main>
+        <section class="productos">
+            <h1>ITEMS ENCANTADOS</h1>
+            <div class="contenedor-cards">
+                <div class="card">
+                    <img src="imgenes-productos/Enchanted_Diamond_Sword.gif" alt="Espada de diamante">
+                    <h2>Espada de Diamante Encantado</h2>
+                    <p>Precio: 10 esmeraldas</p>
+                    <div class="box-button btn-carrito" 
+                    data-id="espada_diamante_encantado" 
+                    data-nombre="Espada de Diamante" 
+                    data-precio="10">
+                    <div class="button"><span>Añadir al carrito</span></div>
+                </div>
+                
+            </div>
+            <div class="card">
+                <img src="./imgenes-productos/Enchanted_Diamond_Axe.gif" alt="Pico encantado">
+                <h2>Hacha de Diamante Encantado</h2>
+                <p>Precio: 12 esmeraldas</p>
+                <div class="box-button btn-carrito" 
+                data-id="hacha_diamante_encantado" 
+                data-nombre="Hacha de Diamante" 
+                data-precio="10">
+                <div class="button"><span>Añadir al carrito</span></div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="./imgenes-productos/Enchanted_Diamond_Pickaxe.gif" alt="TNT">
+            <h2>Pico de Diamante Encantado</h2>
+            <p>Precio: 8 esmeraldas</p>
+            <div class="box-button btn-carrito" 
+            data-id="pico_diamante_encantado" 
+            data-nombre="Pico de Diamante" 
+            data-precio="10">
+            <div class="button"><span>Añadir al carrito</span></div>
+        </div>
+    </div>
+    <div class="card">
+        <img src="./imgenes-productos/Enchanted_Diamond_Shovel.gif" alt="Espada de diamante">
+        <h2>Pala de Diamante Encantado</h2>
+        <p>Precio: 10 esmeraldas</p>
+        <div class="box-button btn-carrito" 
+        data-id="pala_diamante_encantado" 
+        data-nombre="Pala de Diamante" 
+        data-precio="10">
+        <div class="button"><span>Añadir al carrito</span></div>
+    </div>
+</div>
+<div class="card">
+    <img src="./imgenes-productos/Enchanted_Bow.gif" alt="Pico encantado">
+    <h2>Arco Encantado</h2>
+    <p>Precio: 12 esmeraldas</p>
+    <div class="box-button btn-carrito" 
+    data-id="arco_encantado" 
+    data-nombre="Arco Encantado" 
+    data-precio="10">
+    <div class="button"><span>Añadir al carrito</span></div>
+</div>
+</div>
+<div class="card">
+    <img src="./imgenes-productos/Enchanted_Trident_(item).gif" alt="TNT">
+    <h2>Tridente Encantado</h2>
+    <p>Precio: 8 esmeraldas</p>
+    <div class="box-button btn-carrito" 
+    data-id="tridente_encantado" 
+    data-nombre="Tridente Encantado" 
+    data-precio="10">
+    <div class="button"><span>Añadir al carrito</span></div>
+</div>
+</div>
+<div class="card">
+    <img src="./imgenes-productos/Enchanted_Diamond_Helmet_(item).gif" alt="Espada de diamante">
+    <h2>Casco de Diamante Encantado</h2>
+    <p>Precio: 10 esmeraldas</p>
+    <div class="box-button btn-carrito" 
+    data-id="casco_diamante_encantado" 
+    data-nombre="Casco de Diamante" 
+    data-precio="10">
+    <div class="button"><span>Añadir al carrito</span></div>
+</div>
+</div>
+<div class="card">
+    <img src="./imgenes-productos/Enchanted_Diamond_Chestplate_(item).gif" alt="Pico encantado">
+    <h2>Pechera de Diamante Encantado</h2>
+    <p>Precio: 12 esmeraldas</p>
+    <div class="box-button btn-carrito" 
+    data-id="pechera_diamante_encantado" 
+    data-nombre="Pechera de Diamante" 
+    data-precio="10">
+    <div class="button"><span>Añadir al carrito</span></div>
+</div>
+</div>
+<div class="card">
+    <img src="./imgenes-productos/Enchanted_Diamond_Leggings_(item).gif" alt="TNT">
+    <h2>Pantalones de Diamante Encantado</h2>
+    <p>Precio: 8 esmeraldas</p>
+    <div class="box-button btn-carrito" 
+    data-id="pantalones_diamante_encantado" 
+    data-nombre="Pantalones de Diamante" 
+    data-precio="10">
+    <div class="button"><span>Añadir al carrito</span></div>
+</div>
+</div>
+<div class="card">
+    <img src="./imgenes-productos/Enchanted_Diamond_Boots_(item).gif" alt="Pico encantado">
+    <h2>Botas de Diamante Encantado</h2>
+    <p>Precio: 12 esmeraldas</p>
+    <div class="box-button btn-carrito" 
+    data-id="botas_diamante_encantado" 
+    data-nombre="Botas de Diamante" 
+    data-precio="10">
+    <div class="button"><span>Añadir al carrito</span></div>
+</div>
+</div>
+<div class="card">
+    <img src="./imgenes-productos/Enchanted_Shield_(item).gif" alt="TNT">
+    <h2>Escudo Encantado</h2>
+    <p>Precio: 8 esmeraldas</p>
+    <div class="box-button btn-carrito" 
+    data-id="escudo_encantado" 
+    data-nombre="Escudo Encantado" 
+    data-precio="10">
+    <div class="button"><span>Añadir al carrito</span></div>
+</div>
+</div>
+<div class="card">
+    <img src="./imgenes-productos/Enchanted_Elytra_(item).gif" alt="TNT">
+    <h2>Elitras Encantadas</h2>
+    <p>Precio: 8 esmeraldas</p>
+    <div class="box-button btn-carrito" 
+    data-id="elitras_encantadas" 
+    data-nombre="Elitras Encantadas" 
+    data-precio="10">
+    <div class="button"><span>Añadir al carrito</span></div>
+</div>
+</div>
+</div>
+</section>
+</main>
 
-    <footer>
-      <div class="footer-contenido">
+<footer>
+    <div class="footer-contenido">
         <p>&copy; 2025 StoreCraft - Todos los derechos reservados</p>
         <div class="social-iconos">
             <a href="https://www.facebook.com">
@@ -38,8 +186,33 @@
                 <img src="/img-redes/twitter.png" alt="twitter">
             </a>
         </div>
-      </div>
-    </footer>
+    </div>
+</footer>
+<script src="carrito.js" defer></script>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('.nav-links');
+
+    toggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+
+    // Opcional: cerrar el menú cuando se hace click fuera
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target) && !toggle.contains(e.target)) {
+        nav.classList.remove('active');
+      }
+    });
+  });
+</script>
+
+<section id="carrito">
+<h2>Carrito de compras</h2>
+<ul id="lista-carrito"></ul>
+<p>Total: <span id="total">0</span> esmeraldas</p>
+<a href="contacto.html#pedido" id="btn-pagar">Pagar</a>
+</section>
 </body>
 </html>

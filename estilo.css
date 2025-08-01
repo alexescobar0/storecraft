@@ -3,13 +3,14 @@ a{
     color: white;
 }
 
-body{
+html, body{
     font-family: sans-serif;
     margin: 0;
     padding: 0;
-    width: 100%;
     height: 100%;
-    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: #f5ecec;
 }
 
 header{
@@ -33,7 +34,7 @@ header{
 }
 
 .logo img{
-    height: 3rem;
+    height: clamp(2rem, 5vw, 3rem);
     margin-right: 10px;
 }
 
@@ -51,8 +52,38 @@ header{
 }
 
 nav a:hover{
-    color: aqua;
+    color: rgb(16, 37, 37);
 }
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #f5f5f5;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #222222;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    display: none;
+    gap: 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
 
 #textodevideo {
     position: relative;
@@ -85,19 +116,20 @@ video {
     mix-blend-mode: overlay;
 }
 
-.texto{
+.texto {
     color: white;
-    padding: 350px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width:50%;
-    margin: auto;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 2;
+    text-align: center;
+    padding: 0 20px;
+    width: 90%;
+    max-width: 800px;
 }
-.texto h1{
+
+.texto h1 {
     font-family: 'Press Start 2P', cursive;
     font-size: 2rem;
 }
@@ -108,9 +140,7 @@ footer {
     padding: 20px 0;
     text-align: center;
     font-family: "Noto Sans", sans-serif;
-    position: relative;
     width: 100%;
-    bottom: 0;
 }
 
 .footer-contenido {
@@ -139,4 +169,180 @@ footer {
 
 .social-links img:hover {
     transform: scale(1.2);
+}
+main {
+    flex: 1;
+    margin-top: 100px;
+}
+
+.productos {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.contenedor-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.colorful-form {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 60px;
+  padding: 90px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #fff;
+  color: #333;
+  border-radius: 5px;
+}
+
+textarea.form-input {
+  height: 100px;
+}
+
+.form-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #794f4d;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+  background-color: #574140;
+}
+
+.box-button {
+  cursor: pointer;
+  border: 4px solid black;
+  background-color: gray;
+  padding-bottom: 10px;
+  transition: 0.1s ease-in-out;
+  user-select: none;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 10px;
+  border-radius: 6px;
+}
+
+.button {
+  background-color: #dddddd;
+  border: 4px solid #fff;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.button span {
+  font-size: 1.1em;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+.box-button:active {
+  padding: 0;
+  margin-bottom: 10px;
+  transform: translateY(10px);
+}
+
+#icono-carrito {
+  position: relative;
+  font-size: 1.4em;
+  cursor: pointer;
+  margin-left: auto;
+  padding: 0 20px;
+  color: white;
+}
+
+#contador-carrito {
+  background-color: red;
+  color: white;
+  font-size: 0.8em;
+  padding: 2px 6px;
+  border-radius: 50%;
+  position: absolute;
+  top: -5px;
+  right: 10px;
+}
+
+#carrito {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  background-color: white;
+  border: 2px solid #333;
+  padding: 10px;
+  width: 250px;
+  z-index: 1000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  display: none;
+}
+
+#carrito.mostrar {
+  display: block;
+}
+
+#icono-carrito {
+  cursor: pointer;
+}
+
+#lista-carrito li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+#btn-pagar {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 12px;
+  background-color: green;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
 }
